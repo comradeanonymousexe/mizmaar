@@ -26,3 +26,33 @@ document.getElementById("button4").addEventListener("click", function() {
     const content4 = document.getElementById("button4content");
     content4.style.display = content4.style.display === "none" ? "block" : "none";
 });
+
+
+  // Get all the buttons
+const buttons = document.querySelectorAll("button");
+
+  // Add a click event listener to each button
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Play the click sound
+      const clickSound = document.getElementById("clickSound");
+      backgroundMusic.pause();
+      clickSound.play();
+      backgroundMusic.play();
+    });
+});
+
+
+const backgroundMusic = document.getElementById("backgroundMusic");
+
+  // Play the background music when the page loads
+window.addEventListener("click", () => {
+    backgroundMusic.play();
+});
+
+
+const invertButton = document.getElementById("invertButton");
+
+invertButton.addEventListener("click", () => {
+    document.body.classList.toggle("inverted");
+});

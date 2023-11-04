@@ -2,6 +2,12 @@
 
 body {
   font-family: helvetica, sans-serif;
+  cursor: url('img/pencil.png'), auto;
+
+}
+
+#content{
+  background-image: linear-gradient(rgba(122, 121, 121, 0),rgba(255, 255, 255, 0.194));
 }
 
 .bg-img {
@@ -12,15 +18,26 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    background-image: linear-gradient(#d3d3d3, #ffffff);
+
 }
 
 #particles-js {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
 }
 
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.row {
+    position: relative;
+    z-index: 1;
+}
 
 /* Style list items as boxes */
 .box-content ul {
@@ -59,9 +76,69 @@ body {
 }
 
 
+.min-vh-100{
+    min-height: 100vh;
+}
+
+.invert-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 20px;
+      cursor: pointer;
+}
+
+.inverted {
+  filter: invert(100%);
+}
 
 
 
+.button-89 {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  margin-top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.button-89:hover,
+.button-89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
 
 @media (max-width: 768px) {
     .box-content {

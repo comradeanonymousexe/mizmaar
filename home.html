@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Your Website</title>
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/home.css">
-        
-    </head>
-    <body>
-        <div class="d-flex justify-content-center align-items-center vh-100" id="loader">
-            <div class="text-center">
-                <h1>Loading...</h1>
-            </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mizmaar</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/home.css">
+
+</head>
+
+<body>
+    <div class="d-flex justify-content-center align-items-center vh-100" id="loader">
+        <div class="text-center">
+            <h1>Loading...</h1>
         </div>
-        <!-- After the loading screen -->
-        <div class="d-flex justify-content-center align-items-center vh-100" id="content">
+    </div>
+    <!-- After the loading screen -->
 
-            
-            <img src="img/homebg.jpg" class="bg-img" alt="Background Image">
-            <div id="particles-js"></div>
-            
-            <div class="container">
 
-                <div class="row">
+    <div class="d-flex justify-content-center align-items-center min-vh-100" id="content">
 
-                    <div class="col-12 text-center my-2"> 
+    <img src="img/homebg.jpg" class="bg-img" alt="Background Image">
+
+    <button class="button-89" role="button" id="invertButton"> Try Me !</button>
+
+        <div id="particles-js"></div>
+
+        <div class="container">
+
+            <div class="row my-2">
+
+                <div class="col-12 text-center my-2">
                     <button class="btn btn-primary btn-block" id="button1">Foundation Phase</button>
                     <div id="button1content" class="box-content" style="display: none;">
 
                         <ul>
                             <li><a href="#">Prerequisites: Alphabets</a> </li>
-                        </ul>   
+                        </ul>
                         <ul>
                             <li> <a href="#">Introduction: Applied Alphabets </a> </li>
                         </ul>
@@ -41,106 +47,74 @@
                     </div>
                 </div>
 
-                <div class="col-12 text-center my-2"> 
-                <button class="btn btn-primary btn-block" id="button2">Initiation Phase</button>
-                <div id="button2content" class="box-content"  style="display: none;">
-                    <ul>
-                        <li><a href="#" >Vocabulary: Common Objects</a> </li>
-                    </ul>
-                    <ul>
-                        <li><a href="#" >Conversations: Basic Phrases</a> </li>
-                    </ul>
-                    <ul>
-                      <li><a href="#" >Familiarity: Reading without I'rabs</a>
-                    </ul>
+                <div class="col-12 text-center my-2">
+                    <button class="btn btn-primary btn-block" id="button2">Initiation Phase</button>
+                    <div id="button2content" class="box-content" style="display: none;">
+                        <ul>
+                            <li><a href="#">Vocabulary: Common Objects</a> </li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Conversations: Basic Phrases</a> </li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Familiarity: Reading without I'rabs</a>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-                <div class="col-12 text-center my-2"> 
-                <button class="btn btn-primary btn-block" id="button3">Interaction Phase</button>
-                <div id="button3content" class="box-content"  style="display: none;">
-                    <ul>
-                        <li> <a href="#" > Conversations: Expanded </a> </li>
-                    </ul>
-                    <ul>
-                        <li><a href="#" >Grammers: Basic</a> </li>
-                    </ul>
-                    <ul>
-                        <li><a href="#" >Vocabulary: Expanded</a> </li>
-                    </ul>
+                <div class="col-12 text-center my-2">
+                    <button class="btn btn-primary btn-block" id="button3">Interaction Phase</button>
+                    <div id="button3content" class="box-content" style="display: none;">
+                        <ul>
+                            <li> <a href="#"> Conversations: Expanded </a> </li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Grammers: Basic</a> </li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Vocabulary: Expanded</a> </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
 
-                <div class="col-12 text-center my-2"> 
-                <button class="btn btn-primary btn-block" id="button4">Expression Phase</button>
-                <div id="button4content" class="box-content"  style="display: none;">
-                    <ul>
-                        <li><a href="#" >Writing: Fundamental</a> </li>
-                    </ul>
-                    <ul>
-                        <li><a href="#" >Grammers: Advanced Sentence Construction</a> </li>
-                    </ul>
+                <div class="col-12 text-center my-2">
+                    <button class="btn btn-primary btn-block" id="button4">Expression Phase</button>
+                    <div id="button4content" class="box-content" style="display: none;">
+                        <ul>
+                            <li><a href="#">Writing: Fundamental</a> </li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Grammers: Advanced Sentence Construction</a> </li>
+                        </ul>
+                    </div>
                 </div>
+
+                <audio id="clickSound">
+                    <source src="audio/click.wav" type="audio/wav">
+                </audio>
+
+                <audio id="backgroundMusic" loop>
+                    <source src="audio/bg.mp3" type="audio/mpeg">
+                </audio>
+
+
             </div>
-
-
         </div>
     </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="js/home.js"></script>
-<script>
-    particlesJS("particles-js", {
-        particles: {
-            number: {
-                value: 40, // Number of particles
-                density: {
-                    enable: true,
-                    value_area: 800
-                }
-            },
-            color: {
-                value: "#000" // Color of the particles
-            },
-            shape: {
-                type: "circle" // Shape of the particles
-            },
-            size: {
-                value: 2.5, // Size of the particles
-                random: true
-            },
-            move: {
-                enable: true,
-                speed: 1, // Speed of particles
-                direction: "none",
-                random: false,
-                straight: false,
-                out_mode: "out",
-                bounce: false
-            }
-        },
-        interactivity: {
-            detect_on: "canvas",
-            events: {
-                onhover: {
-                    enable: true,
-                    mode: "repulse"
-                },
-                onclick: {
-                    enable: true,
-                    mode: "push"
-                },
-                resize: true
-            }
-        },
-        retina_detect: true
-    });
-</script>
+    <!-- Externalize JSs, use local file instead of CDN-->
+
+
+    <script src="jquery/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+        integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/particle.js"></script>
 
 </body>
+
 </html>
