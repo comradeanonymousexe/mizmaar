@@ -13,7 +13,8 @@
 <body>
     <div class="d-flex justify-content-center align-items-center vh-100" id="loader">
         <div class="text-center">
-            <h1>Loading...</h1>
+            <lottie-player src="https://lottie.host/97c52bd2-a2f2-4691-9914-e3e5a8bcdf61/pRmVLn4NuC.json" background="##ffffff" speed="1" style="width: 300px; height: 300px" loop autoplay direction="1" mode="normal"></lottie-player>
+            <p id="tip"></p>
         </div>
     </div>
     <!-- After the loading screen -->
@@ -23,7 +24,7 @@
 
     <img src="img/homebg.jpg" class="bg-img" alt="Background Image">
 
-    <button class="button-89" role="button" id="invertButton"> Try Me !</button>
+    <button class="button-89 d-none" role="button" id="invertButton"> Tap me !</button>
 
         <div id="particles-js"></div>
 
@@ -105,7 +106,7 @@
 
     <!-- Externalize JSs, use local file instead of CDN-->
 
-
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="jquery/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
         integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="

@@ -1,9 +1,14 @@
-window.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("content").classList.add("d-flex");
+window.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("content").classList.add("d-flex");
+  
+
+  
+  // Add a delay before removing the loading screen
+  setTimeout(function() {
     document.getElementById("loader").classList.remove("d-flex");
     document.getElementById("loader").classList.add("d-none");
-
-
+    document.getElementById("invertButton").classList.remove("d-none");
+  }, 2800); // Delay for 2 seconds
 });
 
 
@@ -55,4 +60,20 @@ const invertButton = document.getElementById("invertButton");
 
 invertButton.addEventListener("click", () => {
     document.body.classList.toggle("inverted");
+
 });
+
+const tip = document.getElementById('tip');
+const tips = [
+  "Tip: Click anywhere in the Home Screen!",
+  "Tip: Practice daily to acquisite earlier",
+  "Tip: Make sure to have an Arabic surrounding!",
+  "Tip: لا تستسلم",
+  "Tip: ماذا تنتظر؟"
+];
+
+// Generate a random index
+const randomIndex = Math.floor(Math.random() * tips.length);
+
+// Set the text of the tip element with the random tip
+tip.textContent = tips[randomIndex];
