@@ -12,28 +12,46 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 
 
-document.getElementById("button1").addEventListener("click", function() {
-    const cssContent = document.getElementById("button1content");
-    cssContent.style.display = cssContent.style.display === "none" ? "block" : "none";
-});
-
-document.getElementById("button2").addEventListener("click", function() {
-    const jsContent = document.getElementById("button2content");
-    jsContent.style.display = jsContent.style.display === "none" ? "block" : "none";
-});
-
-document.getElementById("button3").addEventListener("click", function() {
-    const content3 = document.getElementById("button3content");
-    content3.style.display = content3.style.display === "none" ? "block" : "none";
-});
-
-document.getElementById("button4").addEventListener("click", function() {
-    const content4 = document.getElementById("button4content");
-    content4.style.display = content4.style.display === "none" ? "block" : "none";
-});
-
 
   // Get all the buttons
+const mainButtons = [
+  document.getElementById("button1"),
+  document.getElementById("button2"),
+  document.getElementById("button3"),
+  document.getElementById("button4")
+];
+
+// Get all the content elements
+const contents = [
+  document.getElementById("button1content"),
+  document.getElementById("button2content"),
+  document.getElementById("button3content"),
+  document.getElementById("button4content")
+];
+
+// Function to hide all contents
+function hideAllContents() {
+  contents.forEach(content => {
+    content.style.display = "none";
+  });
+}
+
+// Add a click event listener to each button
+mainButtons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    // If the content of the clicked button is already displayed, hide it
+    if (contents[index].style.display === "block") {
+      contents[index].style.display = "none";
+    } else {
+      // Hide all contents
+      hideAllContents();
+
+      // Show the content of the clicked button
+      contents[index].style.display = "block";
+    }
+  });
+});
+
 const buttons = document.querySelectorAll("button");
 
   // Add a click event listener to each button
@@ -50,7 +68,7 @@ const buttons = document.querySelectorAll("button");
 
 const backgroundMusic = document.getElementById("backgroundMusic");
 
-  // Play the background music when the page loads
+  // Play the background music when a click happens
 window.addEventListener("click", () => {
     backgroundMusic.play();
 });
