@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("content").classList.add("d-flex");
+
   
 
   
@@ -8,6 +8,7 @@ window.addEventListener("DOMContentLoaded", function() {
     document.getElementById("loader").classList.remove("d-flex");
     document.getElementById("loader").classList.add("d-none");
     document.getElementById("invertButton").classList.remove("d-none");
+    document.getElementById("content").classList.add("d-flex");
   }, 2800); // Delay for 2 seconds
 });
 
@@ -77,3 +78,4 @@ const randomIndex = Math.floor(Math.random() * tips.length);
 
 // Set the text of the tip element with the random tip
 tip.textContent = tips[randomIndex];
+
