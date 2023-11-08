@@ -1,14 +1,45 @@
+
 body{
     font-family: 'Oldtown';
     padding-bottom: 5%;
+    background-color: #F8F6F4;
+    color: black;
 }
 p{
     line-height: 200%;
+    padding: 5px 5px 5px 10px;
 }
+
+p,ul,h1,h2{
+    cursor: pointer;
+}
+
+h1,h2{
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+p:hover {
+    background-color: rgba(255, 255, 255, 0.033); /* Semi-transparent white background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+    transition: background-color 0.3s, box-shadow 0.3s; /* Add a smooth transition */
+  }
+  
+
+div .lead{
+    font-size: 18px;
+}
+
+
+
 .container {
     position: relative;
     z-index: 1;
     margin-top: 3%;
+    padding-left: 7%;
+    padding-right: 7%;
 }
 
 .custom-img {
@@ -41,10 +72,62 @@ p{
     width: 0; /* On hover, the underline animates to 0% width (disappears) */
 }
 
+.highlight-gr{
+    color: #5ece5e;
+}
+
+/* Red background for text */
+.highlight-rd {
+    color: rgb(255, 70, 70); /* You can adjust the text color to ensure visibility on the red background */
+  }
+  
+  /* Red underline for text */
+  .underline-rd {
+    text-decoration: underline #5ece5e;
+  }
+
+  .underline-rd:hover{
+    color: #5ece5e;
+    text-decoration: none;
+  }
+  
+
+.inverted {
+    background-color: #1a2532;
+    color: #DDE6ED;
+    transition: 2s;
+  }
+
+.inverted .navbar .nav-item .nav-link{
+    color: #DDE6ED;
+}
+
+.inverted p:hover{
+    background-color: #243344; /* Semi-transparent white background */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.087);
+    border-radius: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Add a smooth transition */
+}
+
+
+::selection {
+    color: #81fc81; 
+    background: #1a2532; 
+  }
+
+  
 
 /* Media query for mobile screens */
 @media (max-width: 768px) {
     .custom-img {
         width: 90%; /* 90% width on mobile screens */
+    }
+    .container{
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    div .lead{
+        font-size: 16px;
     }
 }
