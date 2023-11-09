@@ -81,6 +81,13 @@ div .lead{
     color: rgb(255, 70, 70); /* You can adjust the text color to ensure visibility on the red background */
   }
   
+ .highlight-bl{
+    color: rgb(60, 60, 235);
+ } 
+
+.inverted .highlight-bl{
+    color: aqua;
+}
   /* Red underline for text */
   .underline-rd {
     text-decoration: underline #5ece5e;

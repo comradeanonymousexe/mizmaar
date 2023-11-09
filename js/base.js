@@ -58,3 +58,12 @@ function showPage(pageId) {
   }
 }
 
+function generateHighlightList(id, words, meanings) {
+  var ulElement = document.getElementById(id);
+
+  for (var i = 0; i < words.length; i++) {
+      var liElement = document.createElement("li");
+      liElement.innerHTML = '<span class="highlight-bl">' + words[i] + '</span> - ' + meanings[i];
+      ulElement.appendChild(liElement);
+  }
+}
