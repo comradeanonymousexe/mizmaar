@@ -18,21 +18,22 @@
 
     <div class="container">
         <nav class="navbar navbar-expand">
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html"><i class="fa-solid fa-house-chimney"></i> Home</a>
                         <!-- FontAwesome home icon -->
                     </li>
-                    <li class="nav-item dropdown"> <!-- New "Pages" dropdown menu -->
-                        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa-solid fa-rectangle-list"></i> Pages
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                            <a class="dropdown-item" href="page1.html">Page 1</a>
-                            <a class="dropdown-item" href="page2.html">Page 2</a>
-                            <a class="dropdown-item" href="page3.html">Page 3</a>
-                            <a class="dropdown-item" href="page4.html">Page 4</a>
+                    <li class="nav-item">
+                        <div class="custom-dropdown">
+                            <a class="nav-link custom-dropdown-toggle" onclick="toggleDropdown()" href="#"> <i class="fa-solid fa-rectangle-list"></i> Pages</a>
+                            <div class="custom-dropdown-menu">
+                                <a class="custom-dropdown-item" href="#" onclick="showPage('page1')">Getting Started</a>
+                                <a class="custom-dropdown-item" href="#" onclick="showPage('page2')">Hare & Tortoise</a>
+                                <a class="custom-dropdown-item" href="page2.html">Story of Treasure</a>
+                                <a class="custom-dropdown-item" href="page3.html">Conversation with Sami</a>
+                                <a class="custom-dropdown-item" href="page4.html">Story of Tom Sawyer</a>
+                            </div>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -51,7 +52,7 @@
             </div>
         </nav>
 
-        <div class="container mt-5">
+        <div class="container mt-5 page" id="page1">
             <h1 class="underline-on-hover">Welcome to Arabic Learning</h1>
             <div class="lead">
                 <p>
@@ -89,7 +90,10 @@
                     <br>
                 </p>
                 <p>
-                    <span class="highlight-gr">Comprehensible Input</span>: Stephen Krashen reminds us of the importance
+                    <span class="highligh  .custom-dropdown {
+                        position: relative;
+                        display: inline-block;
+                    }t-gr">Comprehensible Input</span>: Stephen Krashen reminds us of the importance
                     of comprehensible input that's
                     exposing yourself to language in a way that you can understand without learning it, just like a baby
                     learning to babble before speaking in full sentences.
@@ -147,6 +151,13 @@
             </div>
         </div>
 
+        <div class="container mt-5 page" id="page2" style="display: none;">
+            <div class="lead">
+               <p> Following pages contain interesting stories. To familiarize the reader with Arabic words. </p>
+               <h2 class="underline-on-hover">Hare & Tortoise</h2>
+            </div>
+        </div>
+
 
         <audio id="clickSound">
             <source src="audio/click.wav" type="audio/wav">
@@ -157,13 +168,15 @@
         </audio>
         <!-- Your website content goes here -->
 
-        <script src="js/base.js"></script>
+        
         <script src="jquery/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+        <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
             integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
         <script src="bootstrap/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.5.0/js/bootstrap.bundle.min.js"></script>
+        <script src="js/base.js"></script>
+        
 
 </body>
 

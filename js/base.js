@@ -9,7 +9,7 @@ let isPlaying = false;
 
 
   // Play the background music when a click happens
-  backgroundMusicbtn.addEventListener("click", () => {
+backgroundMusicbtn.addEventListener("click", () => {
     if (isPlaying) {
       backgroundMusic.pause();
     } else {
@@ -25,4 +25,36 @@ invertButton.addEventListener("click", () => {
     moonIcon.style.display = moonIcon.style.display === "none" ? "inline" : "none";
 });
 
+function toggleDropdown() {
+  var dropdownMenu = document.querySelector('.custom-dropdown-menu');
+  if (dropdownMenu.style.display === 'none') {
+    dropdownMenu.style.display = 'block';
+  } else {
+    dropdownMenu.style.display = 'none';
+  }
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  var dropdownMenu = document.querySelector('.custom-dropdown-menu');
+  if (!event.target.matches('.custom-dropdown-toggle')) {
+    if (dropdownMenu.style.display === 'block') {
+      dropdownMenu.style.display = 'none';
+    }
+  }
+}
+
+function showPage(pageId) {
+  // Hide all pages
+  var pages = document.getElementsByClassName('page');
+  for (var i = 0; i < pages.length; i++) {
+      pages[i].style.display = 'none';
+  }
+
+  // Show the selected page
+  var page = document.getElementById(pageId);
+  if (page) {
+      page.style.display = 'block';
+  }
+}
 
