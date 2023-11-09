@@ -14,9 +14,14 @@ p,ul,h1,h2{
     cursor: pointer;
 }
 
-h1,h2{
+h1,h2,h3{
     margin-top: 3%;
     margin-bottom: 2%;
+}
+
+.lead strong{
+    text-decoration: dotted;
+    font-weight: bold;
 }
 
 p:hover {
@@ -27,13 +32,14 @@ p:hover {
     transition: background-color 0.3s, box-shadow 0.3s; /* Add a smooth transition */
   }
   
-
-div .lead{
-    font-size: 18px;
+p a{
+    text-decoration: none;
+    color: #2caa2c;
 }
 
-
-
+.inverted p a{
+    color: aqua;
+}
 .container {
     position: relative;
     z-index: 1;
@@ -82,15 +88,25 @@ div .lead{
   }
   
  .highlight-bl{
-    color: rgb(60, 60, 235);
+    color: #2caa2c;
  } 
 
-.inverted .highlight-bl{
+.inverted .highlight-bl, .inverted .highlight-gr{
     color: aqua;
 }
+
+
+.inverted .underline-on-hover::before{
+    background-color: aqua;
+}
+
   /* Red underline for text */
   .underline-rd {
     text-decoration: underline #5ece5e;
+  }
+
+  .inverted .underline-rd{
+    text-decoration: underline aqua;
   }
 
   .underline-rd:hover{
@@ -141,7 +157,13 @@ div .lead{
     background: #1a2532; 
   }
 
-  
+.btn.btn-primary{
+    background-color: #2caa2cc4;
+}
+
+.inverted .btn.btn-primary{
+    background-color: rgb(0, 160, 160);
+}
 
 /* Media query for mobile screens */
 @media (max-width: 768px) {
@@ -154,6 +176,6 @@ div .lead{
     }
 
     div .lead{
-        font-size: 16px;
+        font-size: 1.2rem;
     }
 }
